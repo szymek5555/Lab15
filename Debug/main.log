@@ -1,0 +1,23 @@
+﻿  main.cpp
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: __thiscall Player::Player(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Player@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: __thiscall Player::Player(void)" (??0Player@@QAE@XZ) przywołany w funkcji "public: __thiscall VisitingPlayer::VisitingPlayer(void)" (??0VisitingPlayer@@QAE@XZ)
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: virtual __thiscall Player::~Player(void)" (??1Player@@UAE@XZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Player::crossover(void)" (?crossover@Player@@QAEXXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Player::threePointer(void)" (?threePointer@Player@@QAEXXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Player::dunk(void)" (?dunk@Player@@QAEXXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Player::rest(void)" (?rest@Player@@QAEXXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Player::displayStats(void)" (?displayStats@Player@@QAEXXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: int __thiscall Player::getEnergy(void)" (?getEnergy@Player@@QAEHXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: int __thiscall Player::getStylePoints(void)" (?getStylePoints@Player@@QAEHXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: __thiscall Game::Game(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Game@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00@Z) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: __thiscall Game::Game(void)" (??0Game@@QAE@XZ) przywołany w funkcji "public: __thiscall ThreeVsThree::ThreeVsThree(void)" (??0ThreeVsThree@@QAE@XZ)
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: virtual __thiscall Game::~Game(void)" (??1Game@@UAE@XZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Game::startGame(void)" (?startGame@Game@@QAEXXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Game::endGame(void)" (?endGame@Game@@QAEXXZ) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Refree::monitorGame(class Player &,class Game &)" (?monitorGame@Refree@@QAEXAAVPlayer@@AAVGame@@@Z) przywołany w funkcji _main
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: void __thiscall Coach::managePlayer(class Player &)" (?managePlayer@Coach@@QAEXAAVPlayer@@@Z) przywołany w funkcji _main
+main.obj : error LNK2001: nierozpoznany symbol zewnętrzny "public: virtual void __thiscall VisitingPlayer::play(void)" (?play@VisitingPlayer@@UAEXXZ)
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: virtual __thiscall VisitingPlayer::~VisitingPlayer(void)" (??1VisitingPlayer@@UAE@XZ) przywołany w funkcji "public: virtual void * __thiscall VisitingPlayer::`scalar deleting destructor'(unsigned int)" (??_GVisitingPlayer@@UAEPAXI@Z)
+main.obj : error LNK2001: nierozpoznany symbol zewnętrzny "public: virtual void __thiscall ThreeVsThree::type(void)" (?type@ThreeVsThree@@UAEXXZ)
+main.obj : error LNK2019: nierozpoznany symbol zewnętrzny "public: virtual __thiscall ThreeVsThree::~ThreeVsThree(void)" (??1ThreeVsThree@@UAE@XZ) przywołany w funkcji "public: virtual void * __thiscall ThreeVsThree::`scalar deleting destructor'(unsigned int)" (??_GThreeVsThree@@UAEPAXI@Z)
+C:\Users\USER\Desktop\OOPSE\Projekt\Debug\main.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 21

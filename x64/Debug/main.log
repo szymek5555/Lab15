@@ -1,0 +1,4 @@
+﻿  Coach.cpp
+C:\Users\USER\Desktop\OOPSE\Projekt\main\Coach.cpp(8,12): error C2082: ponowne zdefiniowanie formalnego parametru "player"
+  VisitingPlayer.cpp
+  Generowanie kodu...
