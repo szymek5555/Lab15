@@ -16,3 +16,11 @@ void LocalPlayer::increaseHealth(int amount) {
 void LocalPlayer::printStats() const {
     cout << "LocalPlayer stats: Energy = " << energy << ", Style Points = " << stylePoints << endl;
 }
+
+int LocalPlayer::wearLevel(int energy)
+{
+    if (energy < 80)
+    {
+        throw runtime_error("Error: Energy is too low!");
+    }
+}

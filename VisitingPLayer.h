@@ -10,6 +10,7 @@ namespace PlayerSpace {
         void play() override;
         void increaseHealth(int amount);
         void printStats() const;
+        int energyCheck(int energy) override;
     };
 }
 

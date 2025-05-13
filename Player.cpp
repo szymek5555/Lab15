@@ -7,7 +7,7 @@ using namespace PlayerSpace;
 int Player::objectCount = 0;
 
 Player::Player(string in_name)
-    : name(in_name), energy(100), score(0), stylePoints(0), status(Healthy)
+    : name(in_name), energy(-1), score(0), stylePoints(0), status(Healthy)
 {
     objectCount++;
 }

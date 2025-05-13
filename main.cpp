@@ -31,8 +31,16 @@ int main() {
     game.startGame();
 
     //Utworzenie obiektu VisitingPlayer
-    Player* a = new VisitingPlayer();
+    PlayerSpace::Player* a = new PlayerSpace::VisitingPlayer();
     a->play();
+    try
+    {
+        cout << "Result:" << a->energyCheck(a->getEnergy()) << endl;
+    }
+    catch (const runtime_error& e)
+    {
+        cout << e.what() << endl;
+    }
 
     //Utworzenie meczu 3v3
     Game* b = new ThreeVsThree();
@@ -58,9 +66,19 @@ int main() {
     lpMod.printStats(lp);
     vpMod.printStats(vp);
 
+    try
+    {
+        cout << "Result:" << lp->getAge() << endl;
+    }
+    catch (const runtime_error& e)
+    {
+        cout << e.what() << endl;
+    }
+
     //Główna funkcja
     int userInput;
     while (true) {
+
         cout << "\nChoose a move (Select 1 for crossover, 2 for three-pointer, 3 for a dunk, 4 to rest or 0 to exit): ";
         cin >> userInput;
 

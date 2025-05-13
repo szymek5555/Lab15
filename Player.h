@@ -32,6 +32,7 @@ namespace PlayerSpace {
         void dunk();
         void rest();
         void displayStats();
+        virtual int energyCheck(int energy) { return 0; }
         int getEnergy() const;      // Getter oznaczony jako const, zad 14.4
         int getStylePoints() const; // Getter oznaczony jako const, -||-
         void setStatus(PlayerStatus newStatus);
