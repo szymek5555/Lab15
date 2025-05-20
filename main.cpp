@@ -10,6 +10,9 @@
 #include "FieldModifier.h"  //Class Template
 #include "ArenaMode.h"      //Task 13
 #include "AdventureMode.h"  //Task 13
+#include "UI.h"
+#include "Subject.h"
+#include "Observer.h"
 
 //Namespaces
 using namespace std;
@@ -27,6 +30,7 @@ int main() {
 
     //Tworzymy grę z przestrzeni GameSpace
     GameSpace::Game game("Streetball Showdown", "Henryk Jordan's Park", "Sunny");
+    //game.playersamount = 5;
 
     game.startGame();
 
@@ -42,9 +46,17 @@ int main() {
         cout << e.what() << endl;
     }
 
-    //Utworzenie meczu 3v3
-    Game* b = new ThreeVsThree();
-    b->type();
+    ////Utworzenie meczu 3v3
+    //GameSpace::Game* t = new GameSpace::ThreeVsThree();
+    //t->type();
+    //try
+    //{
+    //    cout << "Result:" << game.playersamount << endl;
+    //}
+    //catch (const runtime_error& f)
+    //{
+    //    cout << f.what() << endl;
+    //}
 
     Refree refree;
     refree.monitorGame(player, game);
@@ -66,19 +78,13 @@ int main() {
     lpMod.printStats(lp);
     vpMod.printStats(vp);
 
-    try
-    {
-        cout << "Result:" << lp->getAge() << endl;
-    }
-    catch (const runtime_error& e)
-    {
-        cout << e.what() << endl;
-    }
-
+    UI* ui = new UI();
+    
     //Główna funkcja
     int userInput;
     while (true) {
 
+        a->addObserver(ui);
         cout << "\nChoose a move (Select 1 for crossover, 2 for three-pointer, 3 for a dunk, 4 to rest or 0 to exit): ";
         cin >> userInput;
 
@@ -88,28 +94,28 @@ int main() {
         }
 
         switch (userInput) {
-        case 1: player.crossover(); break;
-        case 2: player.threePointer(); break;
-        case 3: player.dunk(); break;
-        case 4: player.rest(); break;
+        case 1: a->crossover(); break;
+        case 2: a->threePointer(); break;
+        case 3: a->dunk(); break;
+        case 4: a->rest(); break;
         default: cout << "\nInvalid choice!" << endl;
         }
 
-        player.displayStats();
+        a->displayStats();
 
-        if (player.getEnergy() <= 0) {
+        if (a->getEnergy() <= 0) {
             cout << "\nYou have no energy left! Game over!" << endl;
             break;
         }
 
-        if (player.getStylePoints() == 200) {
+        if (a->getStylePoints() == 60) {
             cout << "You won! It's over!" << endl;
             break;
         }
     }
 
     delete a;
-    delete b;
+    //delete t;
     delete lp;
     delete vp;
 

@@ -145,9 +145,12 @@
     <ClInclude Include="FiveVsFive.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="LocalPlayer.h" />
+    <ClInclude Include="Observer.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Refree.h" />
+    <ClInclude Include="Subject.h" />
     <ClInclude Include="ThreeVsThree.h" />
+    <ClInclude Include="UI.h" />
     <ClInclude Include="VisitingPLayer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -4,7 +4,7 @@
 using namespace std;
 using namespace PlayerSpace;
 
-VisitingPlayer::VisitingPlayer() : Player("Visiting Player") {}
+VisitingPlayer::VisitingPlayer() : Player("Visitor") {}
 
 void VisitingPlayer::play() {
     cout << "Visiting Player enters the game!" << endl;

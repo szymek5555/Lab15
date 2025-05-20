@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Player.h"
+#include<vector>
 
 using namespace std;
 using namespace PlayerSpace;
@@ -7,7 +8,7 @@ using namespace PlayerSpace;
 int Player::objectCount = 0;
 
 Player::Player(string in_name)
-    : name(in_name), energy(-1), score(0), stylePoints(0), status(Healthy)
+    : name(in_name), energy(100), score(0), stylePoints(0), status(Healthy)
 {
     objectCount++;
 }
@@ -61,6 +62,7 @@ void Player::crossover() {
     else {
         cout << name << " is EXHAUSTED!" << endl;
     }
+    notifyObservers();
 }
 
 void Player::threePointer() {
@@ -73,6 +75,7 @@ void Player::threePointer() {
     else {
         cout << name << " is EXHAUSTED!" << endl;
     }
+    notifyObservers();
 }
 
 void Player::dunk() {
@@ -85,6 +88,7 @@ void Player::dunk() {
     else {
         cout << name << " is EXHAUSTED!" << endl;
     }
+    notifyObservers();
 }
 
 void Player::rest() {
@@ -95,6 +99,7 @@ void Player::rest() {
     else {
         cout << name << " is already fully energized!" << endl;
     }
+    notifyObservers();
 }
 
 void Player::displayStats() {
@@ -108,6 +113,7 @@ void Player::displayStats() {
 
 void Player::setStatus(PlayerStatus newStatus) {
     status = newStatus;
+    notifyObservers();
 }
 
 // Wykorzystujemy namespace PlayerSpace 

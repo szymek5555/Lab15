@@ -9,6 +9,7 @@ namespace GameSpace {
         ThreeVsThree();
         void type() override;
         ~ThreeVsThree() override;
+        //void rules();
     };
 }
 

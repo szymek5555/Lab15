@@ -5,7 +5,7 @@
 using namespace std;
 using namespace GameSpace;
 
-FiveVsFive::FiveVsFive() : Game("5v5 Game", "Default Field", "Sunny") {
+FiveVsFive::FiveVsFive():Game("5v5 Game", "Default Field", "Sunny") {
     // Konstruktor 5v5
 }
 

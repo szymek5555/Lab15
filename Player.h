@@ -3,6 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
+#include "Observer.h"
+#include "Subject.h"
 
 using std::string;
 using std::cout;
@@ -11,7 +14,7 @@ using std::endl;
 namespace PlayerSpace {
     enum PlayerStatus { Healthy, Tired };
 
-    class Player {
+    class Player : public Subject {
     protected:
         string name;
         int energy;
@@ -19,6 +22,7 @@ namespace PlayerSpace {
         int stylePoints;
         PlayerStatus status;
         static int objectCount;     // Statyczny licznik obiektów
+        vector<Observer* > observers;
 
     public:
         Player(string in_name);
@@ -45,6 +49,24 @@ namespace PlayerSpace {
         static int getDefaultEnergy() { return 100; }
 
         friend void calculatePlayerStats(const Player& player);
+
+        void addObserver(Observer* observer) override
+        {
+            observers.push_back(observer);
+        }
+
+        void removeObserver(Observer* observer) override
+        {
+            observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
+        }
+
+        void notifyObservers() override
+        {
+            for (Observer* observer : observers)
+            {
+                observer->update();
+            }
+        }
     };
 
     void calculatePlayerStats(const Player& player);

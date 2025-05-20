@@ -14,6 +14,7 @@ namespace GameSpace {
         string name;
         string gameLocation;
         string weather;
+        int playersamount;
 
     public:
         Game(string in_name, string in_gameLocation, string in_weather);
@@ -22,6 +23,8 @@ namespace GameSpace {
         virtual void type();
         void startGame();
         void endGame();
+        //int playersamount = 0;
+        //virtual void rules();
 
         friend void displayWeatherConditions(const Game& game);
     };

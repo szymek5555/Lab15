@@ -10,7 +10,7 @@ namespace PlayerSpace {
         void play() override;
         void increaseHealth(int amount);
         void printStats() const;
-        void wearLevel() {return 0}
+        void wearLevel(int energy);
     };
 }
 

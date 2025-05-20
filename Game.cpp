@@ -4,8 +4,7 @@
 using namespace std;
 using namespace GameSpace;
 
-Game::Game(string in_name, string in_gameLocation, string in_weather)
-    : name(in_name), gameLocation(in_gameLocation), weather(in_weather) {
+Game::Game(string in_name, string in_gameLocation, string in_weather): name(in_name), gameLocation(in_gameLocation), weather(in_weather){
     cout << "Game constructor is called." << endl;
 }
 

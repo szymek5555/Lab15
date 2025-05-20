@@ -1,10 +1,12 @@
 ﻿  Coach.cpp
+  FiveVsFive.cpp
+  Game.cpp
   LocalPlayer.cpp
   main.cpp
   Player.cpp
   Refree.cpp
+  ThreeVsThree.cpp
   VisitingPlayer.cpp
   Generowanie kodu...
 C:\Users\USER\Desktop\OOPSE\Projekt\main\VisitingPlayer.cpp(23,1): warning C4715: "PlayerSpace::VisitingPlayer::energyCheck”: niewszystkie ścieżki kodu zwracają wartość
-  LINK : nie znaleziono elementu C:\Users\USER\Desktop\OOPSE\Projekt\x64\Debug\main.exe ani nie został on skompilowany podczas ostatniego konsolidowania przyrostowego; zostanie wykonana pełna konsolidacja
   main.vcxproj -> C:\Users\USER\Desktop\OOPSE\Projekt\x64\Debug\main.exe

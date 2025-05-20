@@ -17,10 +17,10 @@ void LocalPlayer::printStats() const {
     cout << "LocalPlayer stats: Energy = " << energy << ", Style Points = " << stylePoints << endl;
 }
 
-int LocalPlayer::wearLevel(int energy)
+void LocalPlayer::wearLevel(int energy)
 {
     if (energy < 80)
     {
-        throw runtime_error("Error: Energy is too low!");
+        throw runtime_error("Error: Energy is too low to get in the game!");
     }
 }
